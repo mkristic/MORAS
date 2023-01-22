@@ -1,0 +1,32 @@
+class Main
+{
+   function void main()
+   {
+        var Array A;
+		var int i, n;
+	
+		let n = Keyboard.readInt("Size: ");
+		let A = Array.new(n);
+
+        do Output.println(); 
+	
+		let i = 0;
+		while(i < n)
+		{
+			let A[i] = Keyboard.readInt("Number: ");
+			let i = i + 1;
+		}
+	
+		do Qsort.quicksort(a, 0, n - 1);
+	
+		let i = 0;
+		while(i < n)
+		{
+			do Output.printInt(A[i]);
+			do Output.printString(" ");
+			let i = i + 1;
+		}
+	
+		return;
+   }
+}

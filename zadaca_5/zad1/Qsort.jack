@@ -1,0 +1,41 @@
+class Qsort
+{ 
+   function int Partition(Array A, int low, int high)
+   {
+        var int pivot, i, j, swap;
+	
+		let pivot = A[high];
+		let i = low - 1;
+		let j = low;
+		
+		while(j < high)
+		{
+		   if(~(A[j] > pivot))
+		   {
+				let i = i + 1;
+				let swap = A[j];
+				let A[j] = A[i];
+				let A[i] = swap;
+		   }
+		   let j = j + 1;
+		}
+		let swap = A[i + 1];
+		let A[i + 1] = A[high];
+		let A[high] = swap;
+		return i + 1;
+   }
+   
+   
+   function void quicksort(Array A, int start, int end)
+   {
+        var int q;
+		if(start < end)
+		{ 
+			let q = Qsort.Partition(A, start, end);
+            do Qsort.quicksort(A, start, (q - 1));
+            do Qsort.quicksort(A, q, end);
+		}
+		return;
+   }
+   
+}

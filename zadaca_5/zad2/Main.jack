@@ -1,0 +1,31 @@
+class Main
+{ 
+   function void main()
+   {
+      var Vint v, w;
+	  let v = Vint.new(2);
+	  let w = Vint.new(2);
+	  
+	  do v.set(1,1);
+	  do v.set(2,2);
+	  do v.set(3,3);
+	  do v.set(4,4);
+	 
+      do w.set(1,2);
+	  do w.set(2,3);
+	  do w.set(3,4);
+	  do w.set(4,5);
+	  
+	  if(Vint.is_eq(v,w))
+	  { 
+	     do Output.printString("true");
+	  }
+	  else
+	  {
+	     do Output.printString("false");
+	  }
+	  
+	  do Output.println();
+      return;	  	   
+   }
+}
